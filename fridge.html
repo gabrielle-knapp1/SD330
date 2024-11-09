@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge App - Gabrielle Knapp E04</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="fridge-display">
+        <div id="header">
+            <h1>Refrigerator Display</h1>
+            <button id="onBtn">ON</button>
+            <button id="offBtn">OFF</button>
+        </div>
+
+        <div id="clock-container">
+            <div id="clock"></div>
+            <button id="toggleTimeFormatBtn">Switch 12/24</button>
+        </div>
+
+        <div id="content">
+            <div id="temperature" class="section">
+                Temp: <span id="temp-value">35</span>°<span id="temp-unit">F</span>
+                <br>
+                <button id="increaseTempBtn">+</button>
+                <button id="decreaseTempBtn">-</button>
+                <div id="weather">Weather: Sunny, 80°F in November [totally normal right?]</div>
+            </div>
+            <div id="grocery-list" class="section">
+                Grocery List:
+                <ul id="list-items">
+                    <li>Kombucha</li>
+                    <li>Eggs</li>
+                    <li>Salted Butter</li>
+                    <li>Patties</li>
+                    <li>New Husband</li>
+                </ul>
+            </div>
+            <div id="inside_fridge" class="section">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Q-F9G9uFp6h5BmBggDJjJwHaID%26pid%3DApi&f=1&ipt=6d6b8bc57d8f6a6d0bfd03660992a90d2e9e0d6e3ab9063839e5c3e21add0b14&ipo=images" alt="Inside Fridge">
+            </div>
+            <div id="browser" class="section">
+                <img id="browser-image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgoogle%2Fgoogle_PNG102344.png&f=1&nofb=1&ipt=b71b45b3b0cb7ce4043cd60b2b23cb805b7b20f2475728b78e5a26a67a211c7e&ipo=images" alt="Google Browser">
+                <button id="toggleBrowserContentBtn">Switch Content</button>
+            </div>
+        </div>
+
+        <div id="grocery-input">
+            <input type="text" id="grocery-item" placeholder="Enter grocery item">
+            <button id="addToList">Add to List</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Gabrielle Knapp - System Design E04, 11/09/2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
