@@ -1,1 +1,121 @@
-Hello World from Gabrielle Knapp!
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gabrielle's GitHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .avatar {
+      border-radius: 0; /* Square avatar */
+      height: 100px;
+      margin: 20px 20px 0 0; /* Adjust margin for placement */
+      width: 100px;
+      /*tried making this the background image but it's not working so i just put it by the list of websites*/
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HYXXiA2VPRsvJBGmBXOTUQHaE8%26pid%3DApi&f=1&ipt=4cb79dfb842986c14590be9c382060aa6fbceb17a45a5f183649b4b236885f9f&ipo=images");
+      background-size: cover;
+    }
+
+    #files {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      display: flex; /* looked up and flexing can help */
+      flex-wrap: wrap; /* wrapping content if needed */
+    }
+  </style>
+</head>
+<body onload="Filelist()">
+  <header>
+    <h1>Gabrielle's GitHub</h1>
+    <p>Gabrielle is a junior at Marist College studying Computer Science and Spanish.  She studied abroad in Valparaíso Chile -pictured below.  In her free time she loves rock climbing, board games, and blasting Gracie Abrams in her car.</p>
+  </header>
+
+  <div class="content"> <div class="avatar"></div>
+
+    <section id="files">s
+      <h2>GitHub Files</h2>
+      <ul id="fileList"></ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>Gabrielle Knapp - 11/18/2024</p>
+  </footer>
+
+  <script>
+    //this is what i am using to take and scrape every page in my github
+    function Filelist() {
+      const fileList = document.getElementById('fileList');
+      (async () => {
+        //using an api of my github account, fetch command here
+        const response = await fetch('https://api.github.com/repos/gabrielle-knapp1/SD330/contents/');
+        const data = await response.json();
+
+        //creating the name with just the title of the page
+        data.forEach(file => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = file.html_url;
+          a.target = '_blank';
+          a.textContent = file.name;
+          li.appendChild(a);
+          fileList.appendChild(li);
+        });
+      })();
+    }
+  </script>
+</body>
+</html>
