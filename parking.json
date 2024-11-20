@@ -1,0 +1,189 @@
+{
+    "parkingLots": [
+      {
+        "name": "McCann/Sheahan Lot",
+        "mapJPG": "mcCannLot.jpg",
+        "totalSpaces": 200,
+        "comments": "Open to factulty/staff, residents, and commuters.  Next to McCann gym and nearby Leo and Sheahan dorms.",
+        "primaryType": "All",
+        "studentParkingAvailability": "all the time",
+        "evChargersYN": "N",
+        "parkingSpaces": [
+          {
+            "spaceID": "MC000",
+            "type": "Handicap",
+            "openUnReservedYN": "Y",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filledDateTime": ""
+          },
+          {
+            "spaceID": "MC001",
+            "type": "Handicap",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"Y",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filedDateTime": "2024-11-19T11:49:00"
+          },
+          {
+            "spaceID": "MC002",
+            "type": "Handicap",
+            "openUnReservedYN": "Y",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filedDateTime": ""
+          },
+          {
+            "spaceID": "MC003",
+            "type": "Handicap",
+            "openUnReservedYN": "Y",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filedDateTime": ""
+          },
+          {
+            "spaceID": "MC004",
+            "type": "Handicap",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"Y",
+            "reservationDateTime": "2024-11-19T07:00:00, 2024-11-19T09:30:00",
+            "filedDateTime": "2024-11-19T07:05:00"
+          },
+          {
+            "spaceID": "MC005",
+            "type": "Handicap",
+            "openUnReservedYN": "Y",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filedDateTime": ""
+          },
+          {
+            "spaceID": "MC006",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"Y",
+            "reservationDateTime": "2024-11-19T10:00:00, 2024-11-19T14:00:00",
+            "filedDateTime": "2024-11-19T10:11:00"
+          },
+          {
+            "spaceID": "MC007",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"Y",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "2024-11-19T12:30:00, 2024-11-19T18:45:00",
+            "filedDateTime": ""
+          },
+          {
+            "spaceID": "MC008",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"Y",
+            "reservationDateTime": "2024-11-19T09:15:00, 2024-11-19T10:55:00",
+            "filedDateTime": "2024-11-19T09:10:00"
+          },
+          {
+            "spaceID": "MC009",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"Y",
+            "reservationDateTime": "2024-11-19T11:15:00, 2024-11-19T12:00:00",
+            "filedDateTime": "2024-11-19T11:00:00"
+          },
+          {
+            "spaceID": "MC010",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"Y",
+            "filledUnReservedYN":"N",
+            "filledReservedYN":"N",
+            "reservationDateTime": "2024-11-19T12:15:00, 2024-11-19T15:30:00",
+            "filedDateTime": ""
+          },
+          {
+            "spaceID": "MC011",
+            "type": "Student",
+            "openUnReservedYN": "N",
+            "openReservedYN":"N",
+            "filledUnReservedYN":"Y",
+            "filledReservedYN":"N",
+            "reservationDateTime": "",
+            "filedDateTime": "2024-11-19T08:55:00"
+          }
+        ]
+      },
+      {
+        "name": "Foy Lot",
+        "mapJPG": "foyLot.jpg",
+        "totalSpaces": 40,
+        "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
+        "primaryType": "Faculty/Staff",
+        "studentParkingAvailability": "M-F: 5PM - 1AM, Weekends: All day",
+        "evChargersYN": "N"
+      },
+      {
+        "name": "Dyson Lot",
+        "mapJPG": "dysonLot.jpg",
+        "totalSpaces": 60,
+        "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
+        "primaryType": "Faculty/Staff",
+        "studentParkingAvailability": "M-F: 5PM - 1AM, Weekends: All day",
+        "evChargersYN": "N"
+      },
+      {
+        "name": "Donnelly Lot",
+        "mapJPG": "donnellyLot.jpg",
+        "totalSpaces": 120,
+        "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
+        "primaryType": "Faculty/Staff",
+        "studentParkingAvailability": "M-F: 5PM - 1AM, Weekends: All day",
+        "evChargersYN": "N"
+      },
+      {
+        "name": "Fontaine Lot",
+        "mapJPG": "fontaineLot.jpg",
+        "totalSpaces": 50,
+        "comments": "Border spaces reserved for staff 24/7, interior spaces always open to students.",
+        "primaryType": "All",
+        "studentParkingAvailability": "24/7 - Interior Spaces Only",
+        "evChargersYN": "N"
+      },
+      {
+        "name": "Hoop Lot",
+        "mapJPG": "hoopLot.jpg",
+        "totalSpaces": 100,
+        "comments": "Always available to residents",
+        "primaryType": "Residents",
+        "studentParkingAvailability": "24/7",
+        "evChargersYN": "N"
+      },
+      {
+        "name": "St. Anne's/North End Lot",
+        "mapJPG": "northEndLot.jpg",
+        "totalSpaces": 120,
+        "comments": "Always available to residents",
+        "primaryType": "Residents.",
+        "studentParkingAvailability": "24/7",
+        "evChargersYN": "N"
+      }
+    ]
+  }
