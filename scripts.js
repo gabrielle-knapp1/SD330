@@ -1,95 +1,105 @@
-let is24HourFormat = false;
-let isCelsius = false;
-let temperature = 35;
-let isClearView = false;
-let browserContent = "google"; // Track current content (google, music, netflix)
+// Hardcoded data from parking.json
+const parkingLots = [
+  {
+    name: "McCann/Sheahan Lot",
+    mapJPG: "./images/mcCannLot.jpg",
+    totalSpaces: 200,
+    comments: "Open to faculty/staff, residents, and commuters. Next to McCann gym and nearby Leo and Sheahan dorms.",
+    primaryType: "All",
+    studentParkingAvailability: "all the time",
+    evChargersYN: "N",
+  },
+  {
+    name: "Foy Lot",
+    mapJPG: "./images/foyLot.jpg",
+    totalSpaces: 40,
+    comments: "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays.",
+    primaryType: "Faculty/Staff",
+    studentParkingAvailability: "M-F: 5PM - 1AM, Weekends: All day",
+    evChargersYN: "N",
+  },
+  {
+    name: "Dyson Lot",
+    mapJPG: "./images/dysonLot.jpg",
+    totalSpaces: 60,
+    comments: "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays.",
+    primaryType: "Faculty/Staff",
+    studentParkingAvailability: "M-F: 5PM - 1AM, Weekends: All day",
+    evChargersYN: "N",
+  },
+  {
+    name: "Donnelly Lot",
+    mapJPG: "./images/donnellyLot.jpg",
+    totalSpaces: 120,
+    comments: "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays.",
+    primaryType: "Faculty/Staff",
+    studentParkingAvailability: "M-F: 5PM - 1AM, Weekends: All day",
+    evChargersYN: "N",
+  },
+  {
+    name: "Fontaine Lot",
+    mapJPG: "./images/fontaineLot.jpg",
+    totalSpaces: 50,
+    comments: "Border spaces reserved for staff 24/7, interior spaces always open to students.",
+    primaryType: "All",
+    studentParkingAvailability: "24/7 - Interior Spaces Only",
+    evChargersYN: "N",
+  },
+  {
+    name: "Hoop Lot",
+    mapJPG: "./images/hoopLot.jpg",
+    totalSpaces: 100,
+    comments: "Always available to residents.",
+    primaryType: "Residents",
+    studentParkingAvailability: "24/7",
+    evChargersYN: "N",
+  },
+  {
+    name: "St. Anne's/North End Lot",
+    mapJPG: "./images/northEndLot.jpg",
+    totalSpaces: 120,
+    comments: "Always available to residents.",
+    primaryType: "Residents",
+    studentParkingAvailability: "24/7",
+    evChargersYN: "N",
+  },
+];
 
-function updateClock() {
-    const clockElement = document.getElementById("clock");
-    const now = new Date();
-    const options = is24HourFormat ? { hour12: false } : { hour12: true };
-    clockElement.textContent = now.toLocaleTimeString([], options);
+// Function to display parking lots
+function displayLots(lots) {
+  const lotDetails = document.getElementById("lotDetails");
+  lotDetails.innerHTML = ""; // Clear existing content
+
+  lots.forEach(lot => {
+    const lotCard = document.createElement("div");
+    lotCard.className = "lot-card";
+    lotCard.innerHTML = `
+      <h2>${lot.name}</h2>
+      <img src="${lot.mapJPG}" alt="Map of ${lot.name}" />
+      <p>Total Spaces: ${lot.totalSpaces}</p>
+      <p>${lot.comments}</p>
+      <p>Primary Type: ${lot.primaryType}</p>
+      <p>Student Parking: ${lot.studentParkingAvailability}</p>
+      <p>EV Chargers: ${lot.evChargersYN}</p>
+    `;
+    lotDetails.appendChild(lotCard);
+  });
 }
 
-function toggleTimeFormat() {
-    is24HourFormat = !is24HourFormat;
-    updateClock();
+// Function to filter parking lots
+function filterLots() {
+  const selectedLot = document.getElementById("lotFilter").value;
+  if (selectedLot === "all") {
+    displayLots(parkingLots);
+  } else {
+    const filteredLots = parkingLots.filter(lot => lot.name === selectedLot);
+    displayLots(filteredLots);
+  }
 }
 
-function toggleTemperatureUnit() {
-    const tempValue = document.getElementById("temp-value");
-    const tempUnit = document.getElementById("temp-unit");
+// Initialize the page with all lots displayed
+document.addEventListener("DOMContentLoaded", () => displayLots(parkingLots));
 
-    if (isCelsius) {
-        temperature = Math.round(temperature * 9 / 5 + 32);
-        tempUnit.textContent = "F";
-    } else {
-        temperature = Math.round((temperature - 32) * 5 / 9);
-        tempUnit.textContent = "C";
-    }
-
-    tempValue.textContent = temperature;
-    isCelsius = !isCelsius;
+function returnHome() {
+  window.location.href = "parking.html"; // Adjust the path if the home page is in a different directory
 }
-
-function increaseTemperature() {
-    temperature += 1;
-    updateTemperatureDisplay();
-}
-
-function decreaseTemperature() {
-    temperature -= 1;
-    updateTemperatureDisplay();
-}
-
-function updateTemperatureDisplay() {
-    const tempValue = document.getElementById("temp-value");
-    tempValue.textContent = temperature;
-    document.getElementById("weather").textContent = isCelsius
-        ? `Weather: Sunny, ${Math.round((72 - 32) * 5 / 9)}°C`
-        : `Weather: Hurricane, 22°F [gift from Biden inc]`;
-}
-
-function toggleBrowserContent() {
-    const browserImage = document.getElementById("browser-image");
-
-    if (browserContent === "google") {
-        browserImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.YR48w8RppULt5xGEcA7gLgHaE8%26pid%3DApi&f=1&ipt=240c35027067b42d47b64b0099945913120cf311bb49cedd2e36617677bdb4c7&ipo=images";
-        browserContent = "music";
-    } else if (browserContent === "music") {
-        browserImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3f-gyLPI4fXP7oofglJNXQHaHa%26pid%3DApi&f=1&ipt=290756c28c51da3d93e8203ad5e16e2b324a471e09c05e8005f213949f9d433c&ipo=images";
-        browserContent = "netflix";
-    } else {
-        browserImage.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fgoogle%2Fgoogle_PNG102344.png&f=1&nofb=1&ipt=b71b45b3b0cb7ce4043cd60b2b23cb805b7b20f2475728b78e5a26a67a211c7e&ipo=images";
-        browserContent = "google";
-    }
-}
-
-document.getElementById("onBtn").addEventListener("click", () => {
-    document.getElementById("content").style.display = "flex";
-    document.getElementById("grocery-input").style.display = "block";
-});
-
-document.getElementById("offBtn").addEventListener("click", () => {
-    document.getElementById("content").style.display = "none";
-    document.getElementById("grocery-input").style.display = "none";
-});
-
-document.getElementById("addToList").addEventListener("click", () => {
-    const itemText = document.getElementById("grocery-item").value.trim();
-    if (itemText) {
-        const listItem = document.createElement("li");
-        listItem.textContent = itemText;
-        document.getElementById("list-items").appendChild(listItem);
-        document.getElementById("grocery-item").value = "";
-    }
-});
-
-document.getElementById("toggleTimeFormatBtn").addEventListener("click", toggleTimeFormat);
-document.getElementById("temp-value").addEventListener("click", toggleTemperatureUnit);
-document.getElementById("increaseTempBtn").addEventListener("click", increaseTemperature);
-document.getElementById("decreaseTempBtn").addEventListener("click", decreaseTemperature);
-document.getElementById("toggleBrowserContentBtn").addEventListener("click", toggleBrowserContent);
-
-updateClock();
-setInterval(updateClock, 1000);

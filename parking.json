@@ -2,11 +2,11 @@
     "parkingLots": [
       {
         "name": "McCann/Sheahan Lot",
-        "mapJPG": "mcCannLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 200,
         "comments": "Open to factulty/staff, residents, and commuters.  Next to McCann gym and nearby Leo and Sheahan dorms.",
         "primaryType": "All",
-        "studentParkingAvailability": "24/7",
+        "studentParkingAvailability": "all the time",
         "evChargersYN": "N",
         "parkingSpaces": [
           {
@@ -133,7 +133,7 @@
       },
       {
         "name": "Foy Lot",
-        "mapJPG": "foyLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 40,
         "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
         "primaryType": "Faculty/Staff",
@@ -142,7 +142,7 @@
       },
       {
         "name": "Dyson Lot",
-        "mapJPG": "dysonLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 60,
         "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
         "primaryType": "Faculty/Staff",
@@ -151,7 +151,7 @@
       },
       {
         "name": "Donnelly Lot",
-        "mapJPG": "donnellyLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 120,
         "comments": "Open to students between 5pm to 1am on weekdays, all day on Saturdays and Sundays",
         "primaryType": "Faculty/Staff",
@@ -160,7 +160,7 @@
       },
       {
         "name": "Fontaine Lot",
-        "mapJPG": "fontaineLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 50,
         "comments": "Border spaces reserved for staff 24/7, interior spaces always open to students.",
         "primaryType": "All",
@@ -169,7 +169,7 @@
       },
       {
         "name": "Hoop Lot",
-        "mapJPG": "hoopLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 100,
         "comments": "Always available to residents",
         "primaryType": "Residents",
@@ -178,7 +178,7 @@
       },
       {
         "name": "St. Anne's/North End Lot",
-        "mapJPG": "northEndLot.jpg",
+        "mapJPG": "./images/northEndLot.jpg",
         "totalSpaces": 120,
         "comments": "Always available to residents",
         "primaryType": "Residents.",

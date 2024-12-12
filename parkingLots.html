@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Lots</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Available Parking Lots</h1>
+    <p>Select a lot to view details or see all lots below.</p>
+  </header>
+  <main>
+    <button id="homeButton" onclick="returnHome()">Return Home</button>
+    <section id="filter-section">
+      <label for="lotFilter" class="filter-label">Choose a parking lot:</label>
+      <select id="lotFilter" onchange="filterLots()">
+        <option value="all">All Lots</option>
+        <option value="McCann/Sheahan Lot">McCann/Sheahan Lot</option>
+        <option value="Foy Lot">Foy Lot</option>
+        <option value="Dyson Lot">Dyson Lot</option>
+        <option value="Donnelly Lot">Donnelly Lot</option>
+        <option value="Fontaine Lot">Fontaine Lot</option>
+        <option value="Hoop Lot">Hoop Lot</option>
+        <option value="St. Anne's/North End Lot">St. Anne's/North End Lot</option>
+      </select>
+    </section>
+    <section id="lotDetails" class="lot-container">
+      <!-- Parking lot details will be dynamically added here -->
+    </section>
+  </main>
+  <footer>
+    <p>Gabrielle Knapp - 12/10/2024</p>
+  </footer>
+</body>
+</html>

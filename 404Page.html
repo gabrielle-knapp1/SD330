@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="error-page">
+    <h1>Oops! Page Not Found</h1>
+    <p>Looks like you've taken a wrong turn. Frankie says, "Don't worry, let's get you back on track!"</p>
+    <img src="./images/frankie.jpg" alt="A cute image of Frankie" class="error-image">
+    <button onclick="goHome()">Return Home</button>
+  </main>
+</body>
+<script>
+  function goHome() {
+    window.location.href = "parking.html"; // Adjust to your home page path
+  }
+</script>
+</html>
